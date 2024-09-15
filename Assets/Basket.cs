@@ -49,12 +49,10 @@ public class Basket : MonoBehaviour
                 }
             }
         } else if (collidedWith.tag == "Branch") {
-            Destroy(collidedWith);
-            scoreCounter.score -= 1;
-            
             ApplePicker appleScript = Camera.main.GetComponent<ApplePicker>();
             appleScript.AppleMissed();
             
+            SceneManager.LoadScene("_Game_Over");
         }
     }
 }
