@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Basket : MonoBehaviour
 {
@@ -37,10 +38,14 @@ public class Basket : MonoBehaviour
             HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
 
             if (RoundText.round < 5) {
-                if (scoreCounter.score % 10 == 0) {
+                if (scoreCounter.score % 25 == 0) {
                     RoundText.round += 1;
                     AppleTree.speed += 1.5f;
                     AppleTree.appleDropDelay -= 0.15f;
+
+                    if (RoundText.round == 5) {
+                        SceneManager.LoadScene("_You_Win");
+                    }
                 }
             }
         } else if (collidedWith.tag == "Branch") {
