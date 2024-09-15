@@ -34,6 +34,7 @@ public class Basket : MonoBehaviour
         if (collidedWith.tag == "Apple") {
             Destroy(collidedWith);
             scoreCounter.score += 1;
+            HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
         }
     }
 }
