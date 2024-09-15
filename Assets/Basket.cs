@@ -43,6 +43,13 @@ public class Basket : MonoBehaviour
                     AppleTree.appleDropDelay -= 0.15f;
                 }
             }
+        } else if (collidedWith.tag == "Branch") {
+            Destroy(collidedWith);
+            scoreCounter.score -= 1;
+            
+            ApplePicker appleScript = Camera.main.GetComponent<ApplePicker>();
+            appleScript.AppleMissed();
+            
         }
     }
 }
