@@ -6,14 +6,15 @@ public class AppleTree : MonoBehaviour
 {
     [Header("Inscribed")]
     public GameObject applePrefab;
+    public GameObject branchPrefab;
 
-    public float speed = 1f;
+    public static float speed = 8f;
 
     public float leftAndRightEdge = 10f;
 
     public float changeDirChance = 0.1f;
 
-    public float appleDropDelay = 1f;
+    public static float appleDropDelay = 0.8f;
     // Start is called before the first frame update
     void Start() {
         Invoke("DropApple", 2f);

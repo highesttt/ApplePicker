@@ -35,6 +35,14 @@ public class Basket : MonoBehaviour
             Destroy(collidedWith);
             scoreCounter.score += 1;
             HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
+
+            if (RoundText.round < 5) {
+                if (scoreCounter.score % 10 == 0) {
+                    RoundText.round += 1;
+                    AppleTree.speed += 1.5f;
+                    AppleTree.appleDropDelay -= 0.15f;
+                }
+            }
         }
     }
 }
