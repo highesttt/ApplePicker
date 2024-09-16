@@ -6,7 +6,7 @@ Apple Picker
 
 ## Done by [Highest](https://github.com/highesttt)
 
-This project was done as part of CMIS 382 @ SIUE <br>
+This project was done as part of CS 382 @ SIUE <br>
 Simple ApplePicker game: <br>
   - You have 4 lives, 4 baskets that you control with your mouse.
   - There are 4 rounds that increasingly get harder and harder (100 points, 25 per round, to win)
